@@ -1,0 +1,407 @@
+{
+  "rows": [
+    {
+      "month": "2025-01",
+      "segment": "Campus",
+      "sessions": 1573.0,
+      "successes": 1523.0,
+      "energy_kwh": 32649.389900000002,
+      "revenue": 8815.3347,
+      "contribution": 1474.9944,
+      "planned_hours": 21576,
+      "available_hours": 21361.41254,
+      "occupied_hours": 1317.77312,
+      "uptime": 0.9900543446421951,
+      "utilization": 0.06168941859684715
+    },
+    {
+      "month": "2025-01",
+      "segment": "Commercial",
+      "sessions": 4137.0,
+      "successes": 3996.0,
+      "energy_kwh": 83989.2449,
+      "revenue": 32755.8073,
+      "contribution": 16068.2009,
+      "planned_hours": 26040,
+      "available_hours": 25790.72445,
+      "occupied_hours": 2997.4268,
+      "uptime": 0.9904272062211982,
+      "utilization": 0.11622111685195412
+    },
+    {
+      "month": "2025-01",
+      "segment": "Highway",
+      "sessions": 4741.0,
+      "successes": 4373.0,
+      "energy_kwh": 91727.0601,
+      "revenue": 44028.9885,
+      "contribution": 26179.5762,
+      "planned_hours": 23064,
+      "available_hours": 22660.80184,
+      "occupied_hours": 5014.87938,
+      "uptime": 0.9825182899757198,
+      "utilization": 0.221301938713745
+    },
+    {
+      "month": "2025-01",
+      "segment": "Residential",
+      "sessions": 2232.0,
+      "successes": 2170.0,
+      "energy_kwh": 45609.3354,
+      "revenue": 13682.8008,
+      "contribution": 3975.8260999999998,
+      "planned_hours": 22320,
+      "available_hours": 22105.16254,
+      "occupied_hours": 2093.29974,
+      "uptime": 0.9903746657706094,
+      "utilization": 0.09469732403967204
+    },
+    {
+      "month": "2025-02",
+      "segment": "Campus",
+      "sessions": 1586.0,
+      "successes": 1531.0,
+      "energy_kwh": 31603.7431,
+      "revenue": 8533.0102,
+      "contribution": 1511.8859,
+      "planned_hours": 19488,
+      "available_hours": 19275.5623,
+      "occupied_hours": 1254.61856,
+      "uptime": 0.9890990506978654,
+      "utilization": 0.06508855827256463
+    },
+    {
+      "month": "2025-02",
+      "segment": "Commercial",
+      "sessions": 3959.0,
+      "successes": 3805.0,
+      "energy_kwh": 80758.6207,
+      "revenue": 31495.8631,
+      "contribution": 15532.1103,
+      "planned_hours": 23520,
+      "available_hours": 23287.26447,
+      "occupied_hours": 2934.83103,
+      "uptime": 0.9901047818877551,
+      "utilization": 0.1260272984738426
+    },
+    {
+      "month": "2025-02",
+      "segment": "Highway",
+      "sessions": 4646.0,
+      "successes": 4291.0,
+      "energy_kwh": 90293.3694,
+      "revenue": 43340.8151,
+      "contribution": 25899.1695,
+      "planned_hours": 20832,
+      "available_hours": 20473.17734,
+      "occupied_hours": 4912.08516,
+      "uptime": 0.9827754099462365,
+      "utilization": 0.23992783720985442
+    },
+    {
+      "month": "2025-02",
+      "segment": "Residential",
+      "sessions": 2106.0,
+      "successes": 2027.0,
+      "energy_kwh": 41984.5888,
+      "revenue": 12595.3793,
+      "contribution": 3745.5361000000003,
+      "planned_hours": 20160,
+      "available_hours": 19959.12704,
+      "occupied_hours": 1883.28084,
+      "uptime": 0.9900360634920634,
+      "utilization": 0.09435687423732135
+    },
+    {
+      "month": "2025-03",
+      "segment": "Campus",
+      "sessions": 1847.0,
+      "successes": 1768.0,
+      "energy_kwh": 36884.8001,
+      "revenue": 9958.8956,
+      "contribution": 1819.6285,
+      "planned_hours": 21576,
+      "available_hours": 21340.79766,
+      "occupied_hours": 1469.49793,
+      "uptime": 0.9890988904338154,
+      "utilization": 0.06885862250380383
+    },
+    {
+      "month": "2025-03",
+      "segment": "Commercial",
+      "sessions": 4557.0,
+      "successes": 4390.0,
+      "energy_kwh": 91075.6492,
+      "revenue": 35519.507,
+      "contribution": 17565.9286,
+      "planned_hours": 26040,
+      "available_hours": 25795.62954,
+      "occupied_hours": 3310.37502,
+      "uptime": 0.9906155737327189,
+      "utilization": 0.12833084824957522
+    },
+    {
+      "month": "2025-03",
+      "segment": "Highway",
+      "sessions": 5174.0,
+      "successes": 4762.0,
+      "energy_kwh": 100493.715,
+      "revenue": 48236.9841,
+      "contribution": 28876.7282,
+      "planned_hours": 23064,
+      "available_hours": 22641.405889999998,
+      "occupied_hours": 5490.65672,
+      "uptime": 0.981677327870274,
+      "utilization": 0.24250511415570053
+    },
+    {
+      "month": "2025-03",
+      "segment": "Residential",
+      "sessions": 2487.0,
+      "successes": 2391.0,
+      "energy_kwh": 50028.4186,
+      "revenue": 15008.5253,
+      "contribution": 4562.6447,
+      "planned_hours": 22320,
+      "available_hours": 22074.66396,
+      "occupied_hours": 2286.15517,
+      "uptime": 0.989008241935484,
+      "utilization": 0.10356466463736827
+    },
+    {
+      "month": "2025-04",
+      "segment": "Campus",
+      "sessions": 1632.0,
+      "successes": 1580.0,
+      "energy_kwh": 32940.5211,
+      "revenue": 8893.9425,
+      "contribution": 1553.0198,
+      "planned_hours": 20880,
+      "available_hours": 20713.35099,
+      "occupied_hours": 1298.1047800000001,
+      "uptime": 0.9920187255747126,
+      "utilization": 0.06266995526830496
+    },
+    {
+      "month": "2025-04",
+      "segment": "Commercial",
+      "sessions": 4141.0,
+      "successes": 3991.0,
+      "energy_kwh": 83855.0336,
+      "revenue": 32703.4619,
+      "contribution": 16098.0793,
+      "planned_hours": 25200,
+      "available_hours": 24992.49245,
+      "occupied_hours": 3037.3045,
+      "uptime": 0.9917655734126984,
+      "utilization": 0.12152867530425122
+    },
+    {
+      "month": "2025-04",
+      "segment": "Highway",
+      "sessions": 4753.0,
+      "successes": 4363.0,
+      "energy_kwh": 92709.009,
+      "revenue": 44500.3237,
+      "contribution": 26508.2442,
+      "planned_hours": 22320,
+      "available_hours": 21825.92678,
+      "occupied_hours": 5119.36394,
+      "uptime": 0.9778641030465951,
+      "utilization": 0.23455425245406233
+    },
+    {
+      "month": "2025-04",
+      "segment": "Residential",
+      "sessions": 2265.0,
+      "successes": 2166.0,
+      "energy_kwh": 44955.6219,
+      "revenue": 13486.6857,
+      "contribution": 3922.1666,
+      "planned_hours": 21600,
+      "available_hours": 21347.21892,
+      "occupied_hours": 2017.39552,
+      "uptime": 0.9882971722222222,
+      "utilization": 0.09450390364947829
+    },
+    {
+      "month": "2025-05",
+      "segment": "Campus",
+      "sessions": 1519.0,
+      "successes": 1465.0,
+      "energy_kwh": 30254.2137,
+      "revenue": 8168.6398,
+      "contribution": 1219.7008,
+      "planned_hours": 21576,
+      "available_hours": 21374.06558,
+      "occupied_hours": 1211.85748,
+      "uptime": 0.9906407851316277,
+      "utilization": 0.05669756534919362
+    },
+    {
+      "month": "2025-05",
+      "segment": "Commercial",
+      "sessions": 3869.0,
+      "successes": 3740.0,
+      "energy_kwh": 77987.3429,
+      "revenue": 30415.0646,
+      "contribution": 14835.2013,
+      "planned_hours": 26040,
+      "available_hours": 25827.11519,
+      "occupied_hours": 2736.63537,
+      "uptime": 0.9918247000768049,
+      "utilization": 0.10595977715155727
+    },
+    {
+      "month": "2025-05",
+      "segment": "Highway",
+      "sessions": 4413.0,
+      "successes": 4070.0,
+      "energy_kwh": 85305.0887,
+      "revenue": 40946.4429,
+      "contribution": 24251.297599999998,
+      "planned_hours": 23064,
+      "available_hours": 22620.29146,
+      "occupied_hours": 4772.99266,
+      "uptime": 0.9807618565730143,
+      "utilization": 0.2110049142576344
+    },
+    {
+      "month": "2025-05",
+      "segment": "Residential",
+      "sessions": 2070.0,
+      "successes": 1994.0,
+      "energy_kwh": 42279.8365,
+      "revenue": 12683.9513,
+      "contribution": 3532.7558,
+      "planned_hours": 22320,
+      "available_hours": 22107.40461,
+      "occupied_hours": 1895.61799,
+      "uptime": 0.990475116935484,
+      "utilization": 0.08574584051999218
+    },
+    {
+      "month": "2025-06",
+      "segment": "Campus",
+      "sessions": 1317.0,
+      "successes": 1271.0,
+      "energy_kwh": 26905.1627,
+      "revenue": 7264.3933,
+      "contribution": 976.7147,
+      "planned_hours": 20880,
+      "available_hours": 20657.00257,
+      "occupied_hours": 1070.22584,
+      "uptime": 0.9893200464559387,
+      "utilization": 0.05180934825240718
+    },
+    {
+      "month": "2025-06",
+      "segment": "Commercial",
+      "sessions": 3273.0,
+      "successes": 3173.0,
+      "energy_kwh": 66743.7202,
+      "revenue": 26030.0499,
+      "contribution": 12411.8713,
+      "planned_hours": 25200,
+      "available_hours": 25016.30896,
+      "occupied_hours": 2522.70227,
+      "uptime": 0.9927106730158729,
+      "utilization": 0.10084230547494806
+    },
+    {
+      "month": "2025-06",
+      "segment": "Highway",
+      "sessions": 3816.0,
+      "successes": 3487.0,
+      "energy_kwh": 73981.3973,
+      "revenue": 35511.0684,
+      "contribution": 20848.985,
+      "planned_hours": 22320,
+      "available_hours": 21951.82998,
+      "occupied_hours": 4060.85067,
+      "uptime": 0.9835049274193548,
+      "utilization": 0.18498916371435928
+    },
+    {
+      "month": "2025-06",
+      "segment": "Residential",
+      "sessions": 1718.0,
+      "successes": 1663.0,
+      "energy_kwh": 35130.8842,
+      "revenue": 10539.2664,
+      "contribution": 2790.8734,
+      "planned_hours": 21600,
+      "available_hours": 21378.25679,
+      "occupied_hours": 1569.18003,
+      "uptime": 0.9897341106481481,
+      "utilization": 0.0734007475639458
+    }
+  ],
+  "metrics": [
+    {
+      "label": "Delivered energy",
+      "numerator": "energy_kwh",
+      "unit": "kwh"
+    },
+    {
+      "label": "Session success",
+      "numerator": "successes",
+      "denominator": "sessions",
+      "unit": "percent"
+    },
+    {
+      "label": "Network uptime",
+      "numerator": "available_hours",
+      "denominator": "planned_hours",
+      "unit": "percent"
+    },
+    {
+      "label": "Contribution",
+      "numerator": "contribution",
+      "unit": "usd"
+    }
+  ],
+  "series": {
+    "label": "Delivered energy",
+    "numerator": "energy_kwh",
+    "unit": "kwh"
+  },
+  "title": "EV Charging Operations Intelligence",
+  "subtitle": "Station reliability, connector utilization, unit economics, and capacity planning. January\u2013June 2025. Energy is kWh; all monetary amounts are simulated USD.",
+  "units": {},
+  "columns": [
+    {
+      "key": "month",
+      "label": "Month"
+    },
+    {
+      "key": "segment",
+      "label": "Zone"
+    },
+    {
+      "key": "sessions",
+      "label": "Sessions",
+      "unit": "number"
+    },
+    {
+      "key": "energy_kwh",
+      "label": "Energy",
+      "unit": "kwh"
+    },
+    {
+      "key": "uptime",
+      "label": "Uptime",
+      "unit": "percent"
+    },
+    {
+      "key": "utilization",
+      "label": "Utilization",
+      "unit": "percent"
+    },
+    {
+      "key": "contribution",
+      "label": "Contribution",
+      "unit": "usd"
+    }
+  ]
+}

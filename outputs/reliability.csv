@@ -1,0 +1,5 @@
+zone,outage_port_hours,planned_hours,outage_rate
+Campus,1253.808360,125976,0.009953
+Commercial,1330.464940,152040,0.008751
+Highway,2490.566710,134664,0.018495
+Residential,1348.166140,130320,0.010345

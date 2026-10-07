@@ -1,0 +1,17 @@
+// Delivered energy
+Delivered energy = SUM('FactMonthly'[energy_kwh])
+
+// Session success
+Session success = DIVIDE(SUM('FactMonthly'[successes]), SUM('FactMonthly'[sessions]))
+
+// Network uptime
+Network uptime = DIVIDE(SUM('FactMonthly'[available_hours]), SUM('FactMonthly'[planned_hours]))
+
+// Contribution
+Contribution = SUM('FactMonthly'[contribution])
+
+// Delivered energy Previous Month
+Delivered energy Previous Month = CALCULATE([Delivered energy], DATEADD('DimDate'[Date], -1, MONTH))
+
+// Delivered energy MoM Change %
+Delivered energy MoM Change % = DIVIDE([Delivered energy] - [Delivered energy Previous Month], [Delivered energy Previous Month])

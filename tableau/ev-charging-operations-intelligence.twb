@@ -1,0 +1,648 @@
+<?xml version='1.0' encoding='utf-8'?>
+<workbook version="9.3" source-platform="mac" original-version="9.3">
+  <datasources>
+    <datasource inline="true" name="analytics" caption="EV Charging Operations Intelligence (synthetic)" version="9.3">
+      <connection class="textscan" directory="Data" filename="monthly.csv" server="" password="" locale="en_US">
+        <relation name="monthly.csv" table="[monthly.csv]" type="table">
+          <columns header="yes" separator="," character-set="UTF-8">
+            <column datatype="string" name="month" ordinal="0" />
+            <column datatype="string" name="segment" ordinal="1" />
+            <column datatype="real" name="sessions" ordinal="2" />
+            <column datatype="real" name="successes" ordinal="3" />
+            <column datatype="real" name="energy_kwh" ordinal="4" />
+            <column datatype="real" name="revenue" ordinal="5" />
+            <column datatype="real" name="contribution" ordinal="6" />
+            <column datatype="integer" name="planned_hours" ordinal="7" />
+            <column datatype="real" name="available_hours" ordinal="8" />
+            <column datatype="real" name="occupied_hours" ordinal="9" />
+            <column datatype="date" name="month_date" ordinal="10" />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class="column">
+            <remote-name>month</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[monthly.csv]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>segment</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[segment]</local-name>
+            <parent-name>[monthly.csv]</parent-name>
+            <remote-alias>segment</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>sessions</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sessions]</local-name>
+            <parent-name>[monthly.csv]</parent-name>
+            <remote-alias>sessions</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>successes</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[successes]</local-name>
+            <parent-name>[monthly.csv]</parent-name>
+            <remote-alias>successes</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>energy_kwh</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[energy_kwh]</local-name>
+            <parent-name>[monthly.csv]</parent-name>
+            <remote-alias>energy_kwh</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>revenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[revenue]</local-name>
+            <parent-name>[monthly.csv]</parent-name>
+            <remote-alias>revenue</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>contribution</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[contribution]</local-name>
+            <parent-name>[monthly.csv]</parent-name>
+            <remote-alias>contribution</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>planned_hours</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[planned_hours]</local-name>
+            <parent-name>[monthly.csv]</parent-name>
+            <remote-alias>planned_hours</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>available_hours</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[available_hours]</local-name>
+            <parent-name>[monthly.csv]</parent-name>
+            <remote-alias>available_hours</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>occupied_hours</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[occupied_hours]</local-name>
+            <parent-name>[monthly.csv]</parent-name>
+            <remote-alias>occupied_hours</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>month_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[month_date]</local-name>
+            <parent-name>[monthly.csv]</parent-name>
+            <remote-alias>month_date</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column name="[month]" caption="Month" datatype="string" role="dimension" type="nominal" />
+      <column name="[segment]" caption="Segment" datatype="string" role="dimension" type="nominal" />
+      <column name="[sessions]" caption="Sessions" datatype="real" role="measure" type="quantitative" />
+      <column name="[successes]" caption="Successes" datatype="real" role="measure" type="quantitative" />
+      <column name="[energy_kwh]" caption="Energy Kwh" datatype="real" role="measure" type="quantitative" />
+      <column name="[revenue]" caption="Revenue" datatype="real" role="measure" type="quantitative" />
+      <column name="[contribution]" caption="Contribution" datatype="real" role="measure" type="quantitative" />
+      <column name="[planned_hours]" caption="Planned Hours" datatype="integer" role="measure" type="quantitative" />
+      <column name="[available_hours]" caption="Available Hours" datatype="real" role="measure" type="quantitative" />
+      <column name="[occupied_hours]" caption="Occupied Hours" datatype="real" role="measure" type="quantitative" />
+      <column name="[month_date]" caption="Month Date" datatype="date" role="dimension" type="nominal" />
+      <column name="[Calculation_KPI_0]" caption="Delivered energy" datatype="real" role="measure" type="quantitative" default-format="#,##0">
+        <calculation class="tableau" formula="SUM([energy_kwh])" />
+      </column>
+      <column name="[Calculation_KPI_1]" caption="Session success" datatype="real" role="measure" type="quantitative" default-format="p0.0%">
+        <calculation class="tableau" formula="IF SUM([sessions]) = 0 THEN NULL ELSE SUM([successes]) / SUM([sessions]) END" />
+      </column>
+      <column name="[Calculation_KPI_2]" caption="Network uptime" datatype="real" role="measure" type="quantitative" default-format="p0.0%">
+        <calculation class="tableau" formula="IF SUM([planned_hours]) = 0 THEN NULL ELSE SUM([available_hours]) / SUM([planned_hours]) END" />
+      </column>
+      <column name="[Calculation_KPI_3]" caption="Contribution" datatype="real" role="measure" type="quantitative" default-format="$#,##0">
+        <calculation class="tableau" formula="SUM([contribution])" />
+      </column>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name="Delivered energy">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="analytics" caption="EV Charging Operations Intelligence (synthetic)" />
+          </datasources>
+          <datasource-dependencies datasource="analytics">
+            <column name="[month]" caption="Month" datatype="string" role="dimension" type="nominal" />
+            <column name="[segment]" caption="Segment" datatype="string" role="dimension" type="nominal" />
+            <column name="[sessions]" caption="Sessions" datatype="real" role="measure" type="quantitative" />
+            <column name="[successes]" caption="Successes" datatype="real" role="measure" type="quantitative" />
+            <column name="[energy_kwh]" caption="Energy Kwh" datatype="real" role="measure" type="quantitative" />
+            <column name="[revenue]" caption="Revenue" datatype="real" role="measure" type="quantitative" />
+            <column name="[contribution]" caption="Contribution" datatype="real" role="measure" type="quantitative" />
+            <column name="[planned_hours]" caption="Planned Hours" datatype="integer" role="measure" type="quantitative" />
+            <column name="[available_hours]" caption="Available Hours" datatype="real" role="measure" type="quantitative" />
+            <column name="[occupied_hours]" caption="Occupied Hours" datatype="real" role="measure" type="quantitative" />
+            <column name="[month_date]" caption="Month Date" datatype="date" role="dimension" type="nominal" />
+            <column name="[Calculation_KPI_0]" caption="Delivered energy" datatype="real" role="measure" type="quantitative" default-format="#,##0">
+              <calculation class="tableau" formula="SUM([energy_kwh])" />
+            </column>
+            <column name="[Calculation_KPI_1]" caption="Session success" datatype="real" role="measure" type="quantitative" default-format="p0.0%">
+              <calculation class="tableau" formula="IF SUM([sessions]) = 0 THEN NULL ELSE SUM([successes]) / SUM([sessions]) END" />
+            </column>
+            <column name="[Calculation_KPI_2]" caption="Network uptime" datatype="real" role="measure" type="quantitative" default-format="p0.0%">
+              <calculation class="tableau" formula="IF SUM([planned_hours]) = 0 THEN NULL ELSE SUM([available_hours]) / SUM([planned_hours]) END" />
+            </column>
+            <column name="[Calculation_KPI_3]" caption="Contribution" datatype="real" role="measure" type="quantitative" default-format="$#,##0">
+              <calculation class="tableau" formula="SUM([contribution])" />
+            </column>
+            <column-instance column="[month]" derivation="None" name="[none:month:nk]" pivot="key" type="nominal" />
+            <column-instance column="[segment]" derivation="None" name="[none:segment:nk]" pivot="key" type="nominal" />
+            <column-instance column="[sessions]" derivation="Sum" name="[sum:sessions:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[successes]" derivation="Sum" name="[sum:successes:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[energy_kwh]" derivation="Sum" name="[sum:energy_kwh:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[revenue]" derivation="Sum" name="[sum:revenue:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[contribution]" derivation="Sum" name="[sum:contribution:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[planned_hours]" derivation="Sum" name="[sum:planned_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[available_hours]" derivation="Sum" name="[sum:available_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[occupied_hours]" derivation="Sum" name="[sum:occupied_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[month_date]" derivation="None" name="[none:month_date:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Calculation_KPI_0]" derivation="User" name="[usr:Calculation_KPI_0:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_1]" derivation="User" name="[usr:Calculation_KPI_1:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_2]" derivation="User" name="[usr:Calculation_KPI_2:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_3]" derivation="User" name="[usr:Calculation_KPI_3:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[analytics].[usr:Calculation_KPI_0:qk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name="Session success">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="analytics" caption="EV Charging Operations Intelligence (synthetic)" />
+          </datasources>
+          <datasource-dependencies datasource="analytics">
+            <column name="[month]" caption="Month" datatype="string" role="dimension" type="nominal" />
+            <column name="[segment]" caption="Segment" datatype="string" role="dimension" type="nominal" />
+            <column name="[sessions]" caption="Sessions" datatype="real" role="measure" type="quantitative" />
+            <column name="[successes]" caption="Successes" datatype="real" role="measure" type="quantitative" />
+            <column name="[energy_kwh]" caption="Energy Kwh" datatype="real" role="measure" type="quantitative" />
+            <column name="[revenue]" caption="Revenue" datatype="real" role="measure" type="quantitative" />
+            <column name="[contribution]" caption="Contribution" datatype="real" role="measure" type="quantitative" />
+            <column name="[planned_hours]" caption="Planned Hours" datatype="integer" role="measure" type="quantitative" />
+            <column name="[available_hours]" caption="Available Hours" datatype="real" role="measure" type="quantitative" />
+            <column name="[occupied_hours]" caption="Occupied Hours" datatype="real" role="measure" type="quantitative" />
+            <column name="[month_date]" caption="Month Date" datatype="date" role="dimension" type="nominal" />
+            <column name="[Calculation_KPI_0]" caption="Delivered energy" datatype="real" role="measure" type="quantitative" default-format="#,##0">
+              <calculation class="tableau" formula="SUM([energy_kwh])" />
+            </column>
+            <column name="[Calculation_KPI_1]" caption="Session success" datatype="real" role="measure" type="quantitative" default-format="p0.0%">
+              <calculation class="tableau" formula="IF SUM([sessions]) = 0 THEN NULL ELSE SUM([successes]) / SUM([sessions]) END" />
+            </column>
+            <column name="[Calculation_KPI_2]" caption="Network uptime" datatype="real" role="measure" type="quantitative" default-format="p0.0%">
+              <calculation class="tableau" formula="IF SUM([planned_hours]) = 0 THEN NULL ELSE SUM([available_hours]) / SUM([planned_hours]) END" />
+            </column>
+            <column name="[Calculation_KPI_3]" caption="Contribution" datatype="real" role="measure" type="quantitative" default-format="$#,##0">
+              <calculation class="tableau" formula="SUM([contribution])" />
+            </column>
+            <column-instance column="[month]" derivation="None" name="[none:month:nk]" pivot="key" type="nominal" />
+            <column-instance column="[segment]" derivation="None" name="[none:segment:nk]" pivot="key" type="nominal" />
+            <column-instance column="[sessions]" derivation="Sum" name="[sum:sessions:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[successes]" derivation="Sum" name="[sum:successes:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[energy_kwh]" derivation="Sum" name="[sum:energy_kwh:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[revenue]" derivation="Sum" name="[sum:revenue:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[contribution]" derivation="Sum" name="[sum:contribution:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[planned_hours]" derivation="Sum" name="[sum:planned_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[available_hours]" derivation="Sum" name="[sum:available_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[occupied_hours]" derivation="Sum" name="[sum:occupied_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[month_date]" derivation="None" name="[none:month_date:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Calculation_KPI_0]" derivation="User" name="[usr:Calculation_KPI_0:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_1]" derivation="User" name="[usr:Calculation_KPI_1:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_2]" derivation="User" name="[usr:Calculation_KPI_2:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_3]" derivation="User" name="[usr:Calculation_KPI_3:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[analytics].[usr:Calculation_KPI_1:qk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name="Network uptime">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="analytics" caption="EV Charging Operations Intelligence (synthetic)" />
+          </datasources>
+          <datasource-dependencies datasource="analytics">
+            <column name="[month]" caption="Month" datatype="string" role="dimension" type="nominal" />
+            <column name="[segment]" caption="Segment" datatype="string" role="dimension" type="nominal" />
+            <column name="[sessions]" caption="Sessions" datatype="real" role="measure" type="quantitative" />
+            <column name="[successes]" caption="Successes" datatype="real" role="measure" type="quantitative" />
+            <column name="[energy_kwh]" caption="Energy Kwh" datatype="real" role="measure" type="quantitative" />
+            <column name="[revenue]" caption="Revenue" datatype="real" role="measure" type="quantitative" />
+            <column name="[contribution]" caption="Contribution" datatype="real" role="measure" type="quantitative" />
+            <column name="[planned_hours]" caption="Planned Hours" datatype="integer" role="measure" type="quantitative" />
+            <column name="[available_hours]" caption="Available Hours" datatype="real" role="measure" type="quantitative" />
+            <column name="[occupied_hours]" caption="Occupied Hours" datatype="real" role="measure" type="quantitative" />
+            <column name="[month_date]" caption="Month Date" datatype="date" role="dimension" type="nominal" />
+            <column name="[Calculation_KPI_0]" caption="Delivered energy" datatype="real" role="measure" type="quantitative" default-format="#,##0">
+              <calculation class="tableau" formula="SUM([energy_kwh])" />
+            </column>
+            <column name="[Calculation_KPI_1]" caption="Session success" datatype="real" role="measure" type="quantitative" default-format="p0.0%">
+              <calculation class="tableau" formula="IF SUM([sessions]) = 0 THEN NULL ELSE SUM([successes]) / SUM([sessions]) END" />
+            </column>
+            <column name="[Calculation_KPI_2]" caption="Network uptime" datatype="real" role="measure" type="quantitative" default-format="p0.0%">
+              <calculation class="tableau" formula="IF SUM([planned_hours]) = 0 THEN NULL ELSE SUM([available_hours]) / SUM([planned_hours]) END" />
+            </column>
+            <column name="[Calculation_KPI_3]" caption="Contribution" datatype="real" role="measure" type="quantitative" default-format="$#,##0">
+              <calculation class="tableau" formula="SUM([contribution])" />
+            </column>
+            <column-instance column="[month]" derivation="None" name="[none:month:nk]" pivot="key" type="nominal" />
+            <column-instance column="[segment]" derivation="None" name="[none:segment:nk]" pivot="key" type="nominal" />
+            <column-instance column="[sessions]" derivation="Sum" name="[sum:sessions:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[successes]" derivation="Sum" name="[sum:successes:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[energy_kwh]" derivation="Sum" name="[sum:energy_kwh:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[revenue]" derivation="Sum" name="[sum:revenue:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[contribution]" derivation="Sum" name="[sum:contribution:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[planned_hours]" derivation="Sum" name="[sum:planned_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[available_hours]" derivation="Sum" name="[sum:available_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[occupied_hours]" derivation="Sum" name="[sum:occupied_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[month_date]" derivation="None" name="[none:month_date:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Calculation_KPI_0]" derivation="User" name="[usr:Calculation_KPI_0:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_1]" derivation="User" name="[usr:Calculation_KPI_1:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_2]" derivation="User" name="[usr:Calculation_KPI_2:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_3]" derivation="User" name="[usr:Calculation_KPI_3:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[analytics].[usr:Calculation_KPI_2:qk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name="Contribution">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="analytics" caption="EV Charging Operations Intelligence (synthetic)" />
+          </datasources>
+          <datasource-dependencies datasource="analytics">
+            <column name="[month]" caption="Month" datatype="string" role="dimension" type="nominal" />
+            <column name="[segment]" caption="Segment" datatype="string" role="dimension" type="nominal" />
+            <column name="[sessions]" caption="Sessions" datatype="real" role="measure" type="quantitative" />
+            <column name="[successes]" caption="Successes" datatype="real" role="measure" type="quantitative" />
+            <column name="[energy_kwh]" caption="Energy Kwh" datatype="real" role="measure" type="quantitative" />
+            <column name="[revenue]" caption="Revenue" datatype="real" role="measure" type="quantitative" />
+            <column name="[contribution]" caption="Contribution" datatype="real" role="measure" type="quantitative" />
+            <column name="[planned_hours]" caption="Planned Hours" datatype="integer" role="measure" type="quantitative" />
+            <column name="[available_hours]" caption="Available Hours" datatype="real" role="measure" type="quantitative" />
+            <column name="[occupied_hours]" caption="Occupied Hours" datatype="real" role="measure" type="quantitative" />
+            <column name="[month_date]" caption="Month Date" datatype="date" role="dimension" type="nominal" />
+            <column name="[Calculation_KPI_0]" caption="Delivered energy" datatype="real" role="measure" type="quantitative" default-format="#,##0">
+              <calculation class="tableau" formula="SUM([energy_kwh])" />
+            </column>
+            <column name="[Calculation_KPI_1]" caption="Session success" datatype="real" role="measure" type="quantitative" default-format="p0.0%">
+              <calculation class="tableau" formula="IF SUM([sessions]) = 0 THEN NULL ELSE SUM([successes]) / SUM([sessions]) END" />
+            </column>
+            <column name="[Calculation_KPI_2]" caption="Network uptime" datatype="real" role="measure" type="quantitative" default-format="p0.0%">
+              <calculation class="tableau" formula="IF SUM([planned_hours]) = 0 THEN NULL ELSE SUM([available_hours]) / SUM([planned_hours]) END" />
+            </column>
+            <column name="[Calculation_KPI_3]" caption="Contribution" datatype="real" role="measure" type="quantitative" default-format="$#,##0">
+              <calculation class="tableau" formula="SUM([contribution])" />
+            </column>
+            <column-instance column="[month]" derivation="None" name="[none:month:nk]" pivot="key" type="nominal" />
+            <column-instance column="[segment]" derivation="None" name="[none:segment:nk]" pivot="key" type="nominal" />
+            <column-instance column="[sessions]" derivation="Sum" name="[sum:sessions:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[successes]" derivation="Sum" name="[sum:successes:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[energy_kwh]" derivation="Sum" name="[sum:energy_kwh:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[revenue]" derivation="Sum" name="[sum:revenue:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[contribution]" derivation="Sum" name="[sum:contribution:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[planned_hours]" derivation="Sum" name="[sum:planned_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[available_hours]" derivation="Sum" name="[sum:available_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[occupied_hours]" derivation="Sum" name="[sum:occupied_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[month_date]" derivation="None" name="[none:month_date:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Calculation_KPI_0]" derivation="User" name="[usr:Calculation_KPI_0:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_1]" derivation="User" name="[usr:Calculation_KPI_1:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_2]" derivation="User" name="[usr:Calculation_KPI_2:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_3]" derivation="User" name="[usr:Calculation_KPI_3:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[analytics].[usr:Calculation_KPI_3:qk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name="Monthly trend">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="analytics" caption="EV Charging Operations Intelligence (synthetic)" />
+          </datasources>
+          <datasource-dependencies datasource="analytics">
+            <column name="[month]" caption="Month" datatype="string" role="dimension" type="nominal" />
+            <column name="[segment]" caption="Segment" datatype="string" role="dimension" type="nominal" />
+            <column name="[sessions]" caption="Sessions" datatype="real" role="measure" type="quantitative" />
+            <column name="[successes]" caption="Successes" datatype="real" role="measure" type="quantitative" />
+            <column name="[energy_kwh]" caption="Energy Kwh" datatype="real" role="measure" type="quantitative" />
+            <column name="[revenue]" caption="Revenue" datatype="real" role="measure" type="quantitative" />
+            <column name="[contribution]" caption="Contribution" datatype="real" role="measure" type="quantitative" />
+            <column name="[planned_hours]" caption="Planned Hours" datatype="integer" role="measure" type="quantitative" />
+            <column name="[available_hours]" caption="Available Hours" datatype="real" role="measure" type="quantitative" />
+            <column name="[occupied_hours]" caption="Occupied Hours" datatype="real" role="measure" type="quantitative" />
+            <column name="[month_date]" caption="Month Date" datatype="date" role="dimension" type="nominal" />
+            <column name="[Calculation_KPI_0]" caption="Delivered energy" datatype="real" role="measure" type="quantitative" default-format="#,##0">
+              <calculation class="tableau" formula="SUM([energy_kwh])" />
+            </column>
+            <column name="[Calculation_KPI_1]" caption="Session success" datatype="real" role="measure" type="quantitative" default-format="p0.0%">
+              <calculation class="tableau" formula="IF SUM([sessions]) = 0 THEN NULL ELSE SUM([successes]) / SUM([sessions]) END" />
+            </column>
+            <column name="[Calculation_KPI_2]" caption="Network uptime" datatype="real" role="measure" type="quantitative" default-format="p0.0%">
+              <calculation class="tableau" formula="IF SUM([planned_hours]) = 0 THEN NULL ELSE SUM([available_hours]) / SUM([planned_hours]) END" />
+            </column>
+            <column name="[Calculation_KPI_3]" caption="Contribution" datatype="real" role="measure" type="quantitative" default-format="$#,##0">
+              <calculation class="tableau" formula="SUM([contribution])" />
+            </column>
+            <column-instance column="[month]" derivation="None" name="[none:month:nk]" pivot="key" type="nominal" />
+            <column-instance column="[segment]" derivation="None" name="[none:segment:nk]" pivot="key" type="nominal" />
+            <column-instance column="[sessions]" derivation="Sum" name="[sum:sessions:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[successes]" derivation="Sum" name="[sum:successes:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[energy_kwh]" derivation="Sum" name="[sum:energy_kwh:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[revenue]" derivation="Sum" name="[sum:revenue:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[contribution]" derivation="Sum" name="[sum:contribution:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[planned_hours]" derivation="Sum" name="[sum:planned_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[available_hours]" derivation="Sum" name="[sum:available_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[occupied_hours]" derivation="Sum" name="[sum:occupied_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[month_date]" derivation="None" name="[none:month_date:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Calculation_KPI_0]" derivation="User" name="[usr:Calculation_KPI_0:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_1]" derivation="User" name="[usr:Calculation_KPI_1:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_2]" derivation="User" name="[usr:Calculation_KPI_2:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_3]" derivation="User" name="[usr:Calculation_KPI_3:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Line" />
+          </pane>
+        </panes>
+        <rows>[analytics].[usr:Calculation_KPI_0:qk]</rows>
+        <cols>[analytics].[none:month:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name="Segment comparison">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="analytics" caption="EV Charging Operations Intelligence (synthetic)" />
+          </datasources>
+          <datasource-dependencies datasource="analytics">
+            <column name="[month]" caption="Month" datatype="string" role="dimension" type="nominal" />
+            <column name="[segment]" caption="Segment" datatype="string" role="dimension" type="nominal" />
+            <column name="[sessions]" caption="Sessions" datatype="real" role="measure" type="quantitative" />
+            <column name="[successes]" caption="Successes" datatype="real" role="measure" type="quantitative" />
+            <column name="[energy_kwh]" caption="Energy Kwh" datatype="real" role="measure" type="quantitative" />
+            <column name="[revenue]" caption="Revenue" datatype="real" role="measure" type="quantitative" />
+            <column name="[contribution]" caption="Contribution" datatype="real" role="measure" type="quantitative" />
+            <column name="[planned_hours]" caption="Planned Hours" datatype="integer" role="measure" type="quantitative" />
+            <column name="[available_hours]" caption="Available Hours" datatype="real" role="measure" type="quantitative" />
+            <column name="[occupied_hours]" caption="Occupied Hours" datatype="real" role="measure" type="quantitative" />
+            <column name="[month_date]" caption="Month Date" datatype="date" role="dimension" type="nominal" />
+            <column name="[Calculation_KPI_0]" caption="Delivered energy" datatype="real" role="measure" type="quantitative" default-format="#,##0">
+              <calculation class="tableau" formula="SUM([energy_kwh])" />
+            </column>
+            <column name="[Calculation_KPI_1]" caption="Session success" datatype="real" role="measure" type="quantitative" default-format="p0.0%">
+              <calculation class="tableau" formula="IF SUM([sessions]) = 0 THEN NULL ELSE SUM([successes]) / SUM([sessions]) END" />
+            </column>
+            <column name="[Calculation_KPI_2]" caption="Network uptime" datatype="real" role="measure" type="quantitative" default-format="p0.0%">
+              <calculation class="tableau" formula="IF SUM([planned_hours]) = 0 THEN NULL ELSE SUM([available_hours]) / SUM([planned_hours]) END" />
+            </column>
+            <column name="[Calculation_KPI_3]" caption="Contribution" datatype="real" role="measure" type="quantitative" default-format="$#,##0">
+              <calculation class="tableau" formula="SUM([contribution])" />
+            </column>
+            <column-instance column="[month]" derivation="None" name="[none:month:nk]" pivot="key" type="nominal" />
+            <column-instance column="[segment]" derivation="None" name="[none:segment:nk]" pivot="key" type="nominal" />
+            <column-instance column="[sessions]" derivation="Sum" name="[sum:sessions:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[successes]" derivation="Sum" name="[sum:successes:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[energy_kwh]" derivation="Sum" name="[sum:energy_kwh:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[revenue]" derivation="Sum" name="[sum:revenue:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[contribution]" derivation="Sum" name="[sum:contribution:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[planned_hours]" derivation="Sum" name="[sum:planned_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[available_hours]" derivation="Sum" name="[sum:available_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[occupied_hours]" derivation="Sum" name="[sum:occupied_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[month_date]" derivation="None" name="[none:month_date:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Calculation_KPI_0]" derivation="User" name="[usr:Calculation_KPI_0:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_1]" derivation="User" name="[usr:Calculation_KPI_1:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_2]" derivation="User" name="[usr:Calculation_KPI_2:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_3]" derivation="User" name="[usr:Calculation_KPI_3:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Bar" />
+          </pane>
+        </panes>
+        <rows>[analytics].[none:segment:nk]</rows>
+        <cols>[analytics].[usr:Calculation_KPI_0:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name="Monthly detail">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="analytics" caption="EV Charging Operations Intelligence (synthetic)" />
+          </datasources>
+          <datasource-dependencies datasource="analytics">
+            <column name="[month]" caption="Month" datatype="string" role="dimension" type="nominal" />
+            <column name="[segment]" caption="Segment" datatype="string" role="dimension" type="nominal" />
+            <column name="[sessions]" caption="Sessions" datatype="real" role="measure" type="quantitative" />
+            <column name="[successes]" caption="Successes" datatype="real" role="measure" type="quantitative" />
+            <column name="[energy_kwh]" caption="Energy Kwh" datatype="real" role="measure" type="quantitative" />
+            <column name="[revenue]" caption="Revenue" datatype="real" role="measure" type="quantitative" />
+            <column name="[contribution]" caption="Contribution" datatype="real" role="measure" type="quantitative" />
+            <column name="[planned_hours]" caption="Planned Hours" datatype="integer" role="measure" type="quantitative" />
+            <column name="[available_hours]" caption="Available Hours" datatype="real" role="measure" type="quantitative" />
+            <column name="[occupied_hours]" caption="Occupied Hours" datatype="real" role="measure" type="quantitative" />
+            <column name="[month_date]" caption="Month Date" datatype="date" role="dimension" type="nominal" />
+            <column name="[Calculation_KPI_0]" caption="Delivered energy" datatype="real" role="measure" type="quantitative" default-format="#,##0">
+              <calculation class="tableau" formula="SUM([energy_kwh])" />
+            </column>
+            <column name="[Calculation_KPI_1]" caption="Session success" datatype="real" role="measure" type="quantitative" default-format="p0.0%">
+              <calculation class="tableau" formula="IF SUM([sessions]) = 0 THEN NULL ELSE SUM([successes]) / SUM([sessions]) END" />
+            </column>
+            <column name="[Calculation_KPI_2]" caption="Network uptime" datatype="real" role="measure" type="quantitative" default-format="p0.0%">
+              <calculation class="tableau" formula="IF SUM([planned_hours]) = 0 THEN NULL ELSE SUM([available_hours]) / SUM([planned_hours]) END" />
+            </column>
+            <column name="[Calculation_KPI_3]" caption="Contribution" datatype="real" role="measure" type="quantitative" default-format="$#,##0">
+              <calculation class="tableau" formula="SUM([contribution])" />
+            </column>
+            <column-instance column="[month]" derivation="None" name="[none:month:nk]" pivot="key" type="nominal" />
+            <column-instance column="[segment]" derivation="None" name="[none:segment:nk]" pivot="key" type="nominal" />
+            <column-instance column="[sessions]" derivation="Sum" name="[sum:sessions:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[successes]" derivation="Sum" name="[sum:successes:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[energy_kwh]" derivation="Sum" name="[sum:energy_kwh:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[revenue]" derivation="Sum" name="[sum:revenue:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[contribution]" derivation="Sum" name="[sum:contribution:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[planned_hours]" derivation="Sum" name="[sum:planned_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[available_hours]" derivation="Sum" name="[sum:available_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[occupied_hours]" derivation="Sum" name="[sum:occupied_hours:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[month_date]" derivation="None" name="[none:month_date:nk]" pivot="key" type="nominal" />
+            <column-instance column="[Calculation_KPI_0]" derivation="User" name="[usr:Calculation_KPI_0:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_1]" derivation="User" name="[usr:Calculation_KPI_1:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_2]" derivation="User" name="[usr:Calculation_KPI_2:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Calculation_KPI_3]" derivation="User" name="[usr:Calculation_KPI_3:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Text" />
+            <encodings>
+              <text column="[analytics].[usr:Calculation_KPI_0:qk]" />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[analytics].[none:month:nk] / [analytics].[none:segment:nk]</rows>
+        <cols />
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name="Overview">
+      <style />
+      <size maxheight="900" minheight="900" maxwidth="1280" minwidth="1280" />
+      <zones>
+        <zone h="18000" w="25000" x="0" y="0" id="1" name="Delivered energy" type-v2="sheet" show-title="true" show-caption="false" is-fixed="true">
+          <zone-style />
+        </zone>
+        <zone h="18000" w="25000" x="25000" y="0" id="2" name="Session success" type-v2="sheet" show-title="true" show-caption="false" is-fixed="true">
+          <zone-style />
+        </zone>
+        <zone h="18000" w="25000" x="50000" y="0" id="3" name="Network uptime" type-v2="sheet" show-title="true" show-caption="false" is-fixed="true">
+          <zone-style />
+        </zone>
+        <zone h="18000" w="25000" x="75000" y="0" id="4" name="Contribution" type-v2="sheet" show-title="true" show-caption="false" is-fixed="true">
+          <zone-style />
+        </zone>
+        <zone h="42000" w="65000" x="0" y="20000" id="5" name="Monthly trend" type-v2="sheet" show-title="true" show-caption="false" is-fixed="true">
+          <zone-style />
+        </zone>
+        <zone h="42000" w="34000" x="66000" y="20000" id="6" name="Segment comparison" type-v2="sheet" show-title="true" show-caption="false" is-fixed="true">
+          <zone-style />
+        </zone>
+        <zone h="36000" w="100000" x="0" y="64000" id="7" name="Monthly detail" type-v2="sheet" show-title="true" show-caption="false" is-fixed="true">
+          <zone-style />
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows>
+    <window class="dashboard" name="Overview">
+      <active id="1" />
+    </window>
+  </windows>
+</workbook>

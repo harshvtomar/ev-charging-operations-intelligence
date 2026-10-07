@@ -1,0 +1,7 @@
+{
+  "engine": "Artifact Tool calculation engine; Microsoft Excel not available",
+  "all_segments_first_kpi": 1470145.7669999998,
+  "filtered_first_kpi": 191237.8306,
+  "extra_input_check": "Zero recovered demand produces only the added connector costs.",
+  "error_scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}"
+}

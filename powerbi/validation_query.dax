@@ -1,0 +1,7 @@
+EVALUATE
+SUMMARIZECOLUMNS(
+    "Delivered energy", [Delivered energy],
+    "Session success", [Session success],
+    "Network uptime", [Network uptime],
+    "Contribution", [Contribution]
+)

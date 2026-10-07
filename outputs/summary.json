@@ -1,0 +1,10 @@
+{
+  "stations": 24,
+  "sessions": 73831,
+  "energy_kwh": 1470145.767,
+  "session_success_rate": 0.9479757825303734,
+  "network_uptime": 0.9881712593922654,
+  "network_utilization": 0.1235183604210354,
+  "contribution": 276161.1392,
+  "anomaly_flags": 9
+}

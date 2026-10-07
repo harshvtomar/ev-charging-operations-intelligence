@@ -1,0 +1,251 @@
+{
+  "name": "ev_charging_operations_intelligence",
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "FactMonthly",
+        "columns": [
+          {
+            "name": "month",
+            "dataType": "string",
+            "sourceColumn": "month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "segment",
+            "dataType": "string",
+            "sourceColumn": "segment",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "sessions",
+            "dataType": "double",
+            "sourceColumn": "sessions",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "successes",
+            "dataType": "double",
+            "sourceColumn": "successes",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "energy_kwh",
+            "dataType": "double",
+            "sourceColumn": "energy_kwh",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "revenue",
+            "dataType": "double",
+            "sourceColumn": "revenue",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "contribution",
+            "dataType": "double",
+            "sourceColumn": "contribution",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "planned_hours",
+            "dataType": "int64",
+            "sourceColumn": "planned_hours",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "available_hours",
+            "dataType": "double",
+            "sourceColumn": "available_hours",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "occupied_hours",
+            "dataType": "double",
+            "sourceColumn": "occupied_hours",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "month_date",
+            "dataType": "dateTime",
+            "sourceColumn": "month_date",
+            "summarizeBy": "none",
+            "formatString": "yyyy-mm-dd"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "FactMonthly",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(FolderPath & \"FactMonthly.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"month\", type text}, {\"segment\", type text}, {\"sessions\", type number}, {\"successes\", type number}, {\"energy_kwh\", type number}, {\"revenue\", type number}, {\"contribution\", type number}, {\"planned_hours\", Int64.Type}, {\"available_hours\", type number}, {\"occupied_hours\", type number}, {\"month_date\", type date}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Delivered energy",
+            "expression": "SUM('FactMonthly'[energy_kwh])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Session success",
+            "expression": "DIVIDE(SUM('FactMonthly'[successes]), SUM('FactMonthly'[sessions]))",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Network uptime",
+            "expression": "DIVIDE(SUM('FactMonthly'[available_hours]), SUM('FactMonthly'[planned_hours]))",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Contribution",
+            "expression": "SUM('FactMonthly'[contribution])",
+            "formatString": "$#,0"
+          },
+          {
+            "name": "Delivered energy Previous Month",
+            "expression": "CALCULATE([Delivered energy], DATEADD('DimDate'[Date], -1, MONTH))",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Delivered energy MoM Change %",
+            "expression": "DIVIDE([Delivered energy] - [Delivered energy Previous Month], [Delivered energy Previous Month])",
+            "formatString": "0.0%"
+          }
+        ]
+      },
+      {
+        "name": "DimDate",
+        "columns": [
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "summarizeBy": "none",
+            "formatString": "yyyy-mm-dd",
+            "isKey": true
+          },
+          {
+            "name": "Month",
+            "dataType": "string",
+            "sourceColumn": "Month",
+            "summarizeBy": "none",
+            "sortByColumn": "MonthSort"
+          },
+          {
+            "name": "MonthSort",
+            "dataType": "int64",
+            "sourceColumn": "MonthSort",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "sourceColumn": "Year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quarter",
+            "dataType": "int64",
+            "sourceColumn": "Quarter",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimDate",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(FolderPath & \"DimDate.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"Date\", type date}, {\"Month\", type text}, {\"MonthSort\", Int64.Type}, {\"Year\", Int64.Type}, {\"Quarter\", Int64.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "DimSegment",
+        "columns": [
+          {
+            "name": "segment",
+            "dataType": "string",
+            "sourceColumn": "segment",
+            "summarizeBy": "none",
+            "isKey": true
+          }
+        ],
+        "partitions": [
+          {
+            "name": "DimSegment",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(FolderPath & \"DimSegment.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"segment\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "FactMonthly_DimDate",
+        "fromTable": "FactMonthly",
+        "fromColumn": "month_date",
+        "toTable": "DimDate",
+        "toColumn": "Date",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "FactMonthly_DimSegment",
+        "fromTable": "FactMonthly",
+        "fromColumn": "segment",
+        "toTable": "DimSegment",
+        "toColumn": "segment",
+        "crossFilteringBehavior": "oneDirection"
+      }
+    ],
+    "expressions": [
+      {
+        "name": "FolderPath",
+        "kind": "m",
+        "expression": "\"C:\\Analytics\\ev-charging-operations-intelligence\\bi\\data\\\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"FactMonthly\", \"DimDate\", \"DimSegment\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+Delivered energy
+SUM([energy_kwh])
+
+Session success
+IF SUM([sessions]) = 0 THEN NULL ELSE SUM([successes]) / SUM([sessions]) END
+
+Network uptime
+IF SUM([planned_hours]) = 0 THEN NULL ELSE SUM([available_hours]) / SUM([planned_hours]) END
+
+Contribution
+SUM([contribution])

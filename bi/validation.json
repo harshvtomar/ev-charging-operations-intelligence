@@ -1,0 +1,30 @@
+{
+  "excel": {
+    "native_file": "ev-charging-operations-intelligence.xlsx",
+    "formula_cells": 83,
+    "tables": 1,
+    "charts": [
+      {
+        "part": "xl/drawings/charts/chart1.xml",
+        "source_formulas": [
+          "'Dashboard'!$A$23:$A$28",
+          "'Dashboard'!$B$23:$B$28"
+        ]
+      }
+    ],
+    "data_validation_rules": 2,
+    "formula_error_cells": 0,
+    "recalculation": "Segment edits and lab boundary edits passed in Artifact Tool. Microsoft Excel native app was not available."
+  },
+  "powerbi": {
+    "tables": 3,
+    "visuals": 8,
+    "source_totals_and_bindings": "passed",
+    "native_desktop_open_refresh_dax_visuals": "pending"
+  },
+  "tableau": {
+    "worksheets": 7,
+    "xml_and_packaged_sources": "passed",
+    "native_open_calculations_and_visuals": "pending"
+  }
+}
